@@ -1,0 +1,9 @@
+sequenceDiagram
+    participant Customer
+    participant ShopKeeper as Shop Keeper
+
+    Customer->>ShopKeeper: Request sandwich
+    ShopKeeper-->>Customer: Confirm availability
+    ShopKeeper-->>Customer: Request payment
+    Customer->>ShopKeeper: Provide payment
+    ShopKeeper-->>Customer: Provide sandwich

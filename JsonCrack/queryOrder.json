@@ -1,0 +1,348 @@
+{
+  "data": {
+    "getOrder": {
+      "id": "46fc6d6d-52d3-4960-83ec-61ed37f24cd4",
+      "remoteId": "DR265519640566",
+      "status": "Completed",
+      "siteDetails": {
+        "siteNotes": null,
+        "specialArrangementNotes": null
+      },
+      "appointment": {
+        "id": "ENET:20241125:1400:1500:46fc6d6d-52d3-4960-83ec-61ed37f24cd4:100120702453",
+        "date": "2024-11-25",
+        "startTime": "14:00",
+        "endTime": "15:00"
+      },
+      "subscriber": {
+        "address": {
+          "uprn": "100120702453",
+          "buildingNumber": "25",
+          "thoroughfare": "PERSCORAN WAY",
+          "postTown": "PERSHORE",
+          "postcode": "WR10 1QR"
+        }
+      },
+      "subscriberProduct": {
+        "address": {
+          "uprn": "100120702453",
+          "postcode": "WR10 1QR"
+        },
+        "buyerParty": {
+          "productOffering": {
+            "id": "e0877da7-9d0f-4d37-bd7f-e1624aedeb09",
+            "name": "OCOM-500",
+            "monthlyPrice": "19.99",
+            "productCode": "OCOM-500"
+          },
+          "tenant": {
+            "id": "OCOM"
+          }
+        },
+        "wholesalerParty": {
+          "productOffering": {
+            "id": "9d7e5fa8-0ec6-4378-ac01-ec6978a846cb",
+            "name": "Ruby 900",
+            "monthlyPrice": "0.00",
+            "productCode": "RNET-900"
+          },
+          "tenant": {
+            "id": "RNET"
+          }
+        }
+      }
+    },
+    "getOrderAmendmentList": null,
+    "getAddressList": [
+      {
+        "uprn": "100120702430",
+        "buildingName": "",
+        "buildingNumber": "1",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702439",
+        "buildingName": "",
+        "buildingNumber": "10",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702440",
+        "buildingName": "",
+        "buildingNumber": "11",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702441",
+        "buildingName": "",
+        "buildingNumber": "12",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702442",
+        "buildingName": "",
+        "buildingNumber": "14",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702443",
+        "buildingName": "",
+        "buildingNumber": "15",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702444",
+        "buildingName": "",
+        "buildingNumber": "16",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702445",
+        "buildingName": "",
+        "buildingNumber": "17",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702446",
+        "buildingName": "",
+        "buildingNumber": "18",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702447",
+        "buildingName": "",
+        "buildingNumber": "19",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702431",
+        "buildingName": "",
+        "buildingNumber": "2",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702448",
+        "buildingName": "",
+        "buildingNumber": "20",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702449",
+        "buildingName": "",
+        "buildingNumber": "21",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702450",
+        "buildingName": "",
+        "buildingNumber": "22",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702451",
+        "buildingName": "",
+        "buildingNumber": "23",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702452",
+        "buildingName": "",
+        "buildingNumber": "24",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702453",
+        "buildingName": "",
+        "buildingNumber": "25",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702454",
+        "buildingName": "",
+        "buildingNumber": "26",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702455",
+        "buildingName": "",
+        "buildingNumber": "27",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702456",
+        "buildingName": "",
+        "buildingNumber": "29",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702432",
+        "buildingName": "",
+        "buildingNumber": "3",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702433",
+        "buildingName": "",
+        "buildingNumber": "4",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702434",
+        "buildingName": "",
+        "buildingNumber": "5",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702435",
+        "buildingName": "",
+        "buildingNumber": "6",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702436",
+        "buildingName": "",
+        "buildingNumber": "7",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702437",
+        "buildingName": "",
+        "buildingNumber": "8",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      },
+      {
+        "uprn": "100120702438",
+        "buildingName": "",
+        "buildingNumber": "9",
+        "subBuildingName": "",
+        "thoroughfare": "PERSCORAN WAY",
+        "postTown": "PERSHORE",
+        "postcode": "WR10 1QR"
+      }
+    ],
+    "getServiceAvailabilityList": [
+      {
+        "address": {
+          "uprn": "100120702445"
+        },
+        "appointmentRequired": true,
+        "wholesalerParty": {
+          "tenant": {
+            "id": "ENET"
+          }
+        }
+      },
+      {
+        "address": {
+          "uprn": "100120702445"
+        },
+        "appointmentRequired": true,
+        "wholesalerParty": {
+          "tenant": {
+            "id": "ENET"
+          }
+        }
+      },
+      {
+        "address": {
+          "uprn": "100120702445"
+        },
+        "appointmentRequired": true,
+        "wholesalerParty": {
+          "tenant": {
+            "id": "ENET"
+          }
+        }
+      },
+      {
+        "address": {
+          "uprn": "100120702445"
+        },
+        "appointmentRequired": true,
+        "wholesalerParty": {
+          "tenant": {
+            "id": "ENET"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+# .gitignore
+
+# VS Code settings
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
+
+# Backup files
+*~
+*.bak
+
+# Node, Python, or other environments (if used)
+node_modules/
+venv/
+.env
+
+# Output or build directories (if any exist in your workflow)
+dist/
+build/
+out/
+
+# Personal files
+Pdfs
+
+# Docs
+RiskAnalyis-UserStory/
