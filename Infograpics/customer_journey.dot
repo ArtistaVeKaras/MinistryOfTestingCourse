@@ -1,0 +1,15 @@
+# Sample Infographics
+
+```infographic
+# Sample Infophraphic
+
+infographic list-row-simple-horizontal-arrow
+data
+  items
+    - label Step 1
+      desc Initialize
+    - label Step 2
+      desc Process
+    - label Step 3
+      desc Complete
+```
