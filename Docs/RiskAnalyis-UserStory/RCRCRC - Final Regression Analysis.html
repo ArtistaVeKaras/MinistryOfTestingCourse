@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rahul Parwal">
+    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC0GyTanr5d1UbAyUx4b5pddax-arkUx_WeQ&s">
+    <title>Understanding Requirements Change and RCRCRC</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+        }
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .highlight {
+            background-color: #e8f4f8;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .rcrcrc-box {
+            border-left: 4px solid #3498db;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .logo {
+            width: 50px;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .author-info {
+            text-align: right;
+            color: #666;
+            font-size: 0.9em;
+            font-style: italic;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC0GyTanr5d1UbAyUx4b5pddax-arkUx_WeQ&s" alt="Logo" class="logo">
+        <h1>Understanding requirement changes and RCRCRC heuristic</h1>
+
+        <div class="overview-box" style="background-color: #e8f4f8; padding: 20px; border-radius: 6px; margin: 20px 0;">
+            <p style="margin-bottom: 15px;">RCRCRC heuristic by Karen N. Johnson helps identify areas that need testing when software changes:</p>
+            <ul style="margin-bottom: 0;">
+                <li><strong>Recent</strong> - What testing around new areas of code should I think about?</li>
+                <li><strong>Core</strong> - What essential functions or features must continue to work?</li>
+                <li><strong>Risky</strong> - What features or areas of code are inherently more risky?</li>
+                <li><strong>Configuration Sensitive</strong> - What code is dependent on environment settings?</li>
+                <li><strong>Repaired</strong> - What code has changed to address defects and potentially created issues?</li>
+                <li><strong>Chronic</strong> - What code typically breaks features that need to be tested?</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Requirements evolution: v1 to v2</h2>
+            <div class="comparison">
+                <div class="card">
+                    <h3>Version 1: Task manager</h3>
+                    <ul>
+                        <li>Simple task addition</li>
+                        <li>Simple text input</li>
+                        <li>Single list view</li>
+                        <li>No priority system</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Version 2: Task manager with priority</h3>
+                    <ul>
+                        <li>Task addition with priority</li>
+                        <li>Priority dropdown selection</li>
+                        <li>Color-coded tasks</li>
+                        <li>Visual priority hierarchy</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight">
+                <strong>Key change:</strong> Introduction of priority feature with visual indicators
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>RCRCRC heuristic for regression testing</h2>
+            <p>When requirements change, use this heuristic to identify areas that need testing:</p>
+
+            <div class="rcrcrc-box">
+                <h3>Recent 🆕</h3>
+                <p>What testing around new areas of code should I think about?</p>
+                <ul>
+                    <li>New priority dropdown functionality</li>
+                    <li>Color-coding implementation</li>
+                </ul>
+            </div>
+
+            <div class="rcrcrc-box">
+                <h3>Core ⭐</h3>
+                <p>What essential functions or features must continue to work?</p>
+                <ul>
+                    <li>Task addition still functions</li>
+                    <li>List display remains intact</li>
+                </ul>
+            </div>
+
+            <div class="rcrcrc-box">
+                <h3>Risky ⚠️</h3>
+                <p>What features or areas of code are inherently more risky?</p>
+                <ul>
+                    <li>Multiple priority changes</li>
+                    <li>Large number of tasks</li>
+                </ul>
+            </div>
+
+            <div class="rcrcrc-box">
+                <h3>Configuration-sensitive 🔧</h3>
+                <p>What code is dependent on environment settings?</p>
+                <ul>
+                    <li>Browser compatibility</li>
+                    <li>Screen sizes</li>
+                    <li>Accessibility settings</li>
+                </ul>
+            </div>
+
+            <div class="rcrcrc-box">
+                <h3>Repaired 🔨</h3>
+                <p>What code has changed to address defects and potentially created issues?</p>
+                <ul>
+                    <li>Previous bug fixes still work</li>
+                    <li>No old issues resurface</li>
+                </ul>
+            </div>
+
+            <div class="rcrcrc-box">
+                <h3>Chronic 🔄</h3>
+                <p>What code typically breaks features that need to be tested?</p>
+                <ul>
+                    <li>Data persistence</li>
+                    <li>User interface stability</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>How to apply RCRCRC</h2>
+            <ol>
+                <li>Identify the change (e.g., adding priority feature)</li>
+                <li>For each RCRCRC category:
+                    <ul>
+                        <li>List relevant test scenarios</li>
+                        <li>Prioritize based on risk</li>
+                        <li>Execute tests systematically</li>
+                    </ul>
+                </li>
+                <li>Document findings and any new risks discovered</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>How to apply RCRCRC - detailed guide</h2>
+            
+            <div class="card">
+                <h3>Step 1: Identify the change</h3>
+                <ul>
+                    <li>Review requirement changes (e.g., V1 to V2 transition)</li>
+                    <li>List all new features (Priority dropdown, color coding)</li>
+                    <li>Identify impacted existing features (Task list display)</li>
+                </ul>
+            </div>
+
+            <div class="card" style="margin-top: 20px;">
+                <h3>Step 2: Apply RCRCRC categories</h3>
+                <div class="example-box" style="background-color: #f8f9fa; padding: 15px; border-radius: 4px; margin: 10px 0;">
+                    <h4>Example: Adding priority feature</h4>
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                        <tr style="background-color: #e8f4f8;">
+                            <th style="padding: 10px; border: 1px solid #dee2e6;">Category</th>
+                            <th style="padding: 10px; border: 1px solid #dee2e6;">Test Focus</th>
+                            <th style="padding: 10px; border: 1px solid #dee2e6;">Priority</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">Recent</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">Priority dropdown, color display</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">High</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">Core</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">Simple task addition</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">High</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">Risky</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">Multiple priority tasks</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">Medium</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">Configuration</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">Browser compatibility</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">Medium</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">Repaired</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">Previous bugs</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">Low</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">Chronic</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">Data persistence</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">Medium</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 20px;">
+                <h3>Step 3: Create a test plan</h3>
+                <div class="workflow-box" style="padding: 15px; background-color: #e8f4f8; border-radius: 4px;">
+                    <ol>
+                        <li><strong>Organize tests:</strong>
+                            <ul>
+                                <li>Group by RCRCRC category</li>
+                                <li>Prioritize based on risk level</li>
+                                <li>Create test cases or test charters for each scenario</li>
+                            </ul>
+                        </li>
+                        <li><strong>Execute tests:</strong>
+                            <ul>
+                                <li>Start with high-priority items</li>
+                                <li>Document results systematically</li>
+                                <li>Track issues found</li>
+                            </ul>
+                        </li>
+                        <li><strong>Document findings:</strong>
+                            <ul>
+                                <li>Record test results</li>
+                                <li>Note any new risks discovered</li>
+                                <li>Share insights with team</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="tips-box" style="margin-top: 20px; padding: 15px; background-color: #fff3cd; border-radius: 4px;">
+                <h4>💡 Pro tips:</h4>
+                <ul>
+                    <li>Keep your test plan as a living document - update it as you discover new risks and insights</li>
+                    <li>Collaborate with developers to understand technical impacts</li>
+                    <li>Consider automated tests for repeatable scenarios</li>
+                    <li>Keep track of time spent on each category</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="author-info">
+            Prepared by Rahul Parwal
+        </div>
+    </div>
+</body>
+</html>

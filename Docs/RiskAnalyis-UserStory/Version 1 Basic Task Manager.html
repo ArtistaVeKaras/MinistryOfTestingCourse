@@ -1,0 +1,103 @@
+<!-- Version 1: Task manager with user input -->
+<!-- Purpose: Allows users to create a simple task list by entering tasks manually. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rahul Parwal">
+    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC0GyTanr5d1UbAyUx4b5pddax-arkUx_WeQ&s">
+    <title>Task manager - v1</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .input-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        #taskInput {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            outline: none; /* Remove default outline */
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        button:focus {
+            outline: 3px solid #ffa500; /* Orange outline */
+            outline-offset: 2px; /* Create some space around the outline */
+        }
+        .task {
+            background-color: white;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .task:hover {
+            transform: translateX(5px);
+        }
+        .description {
+            color: #666;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task manager v1.0</h1>
+    <p class="description">Create and manage your tasks in a simple way.</p>
+    <div class="input-container">
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <button onclick="addTask()">Add task</button>
+    </div>
+    <div id="tasks"></div>
+    <script>
+        function addTask() {
+            let taskContainer = document.getElementById("tasks");
+            let taskInput = document.getElementById("taskInput");
+            if (taskInput.value.trim() === "") return;
+            
+            let newTask = document.createElement("div");
+            newTask.className = "task";
+            newTask.textContent = taskInput.value;
+            taskContainer.appendChild(newTask);
+            taskInput.value = "";
+            taskInput.focus();
+        }
+
+        // Add Enter key support
+        document.getElementById("taskInput").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                addTask();
+            }
+        });
+    </script>
+</body>
+</html>
+

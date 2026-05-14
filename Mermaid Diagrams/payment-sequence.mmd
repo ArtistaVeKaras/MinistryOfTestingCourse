@@ -1,0 +1,13 @@
+sequenceDiagram
+    participant User
+    participant App as E-Commerce App
+    participant PaymentGateway as Payment Gateway
+    participant Bank
+
+    User->>App: Add item to cart
+    User->>App: Proceed to checkout
+    App->>PaymentGateway: Initiate payment
+    PaymentGateway->>Bank: Request payment authorization
+    Bank-->>PaymentGateway: Approve or decline payment
+    PaymentGateway-->>App: Payment result
+    App-->>User: Show order confirmation or error

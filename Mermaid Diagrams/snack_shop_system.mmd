@@ -1,0 +1,31 @@
+flowchart TD
+    User[User]
+    UI["User Interface <br>(React)"]
+    AppServer["Application Server<br>(Kotlin)"]
+
+    subgraph Snack_Shop_System
+        ProductService[ProductService]
+        OrderService[OrderService]
+        PaymentGateway[PaymentGateway]
+        LogisticsService[LogisticsService]
+        ProductDB["(Product Database<br>(MongoDB)"]
+        OrderDB[(Order Database<br>MongoDB)]
+        ProductService -->|Database| ProductDB
+        OrderService -->|Database| OrderDB
+    end
+
+    subgraph External_Services
+        LogisticsPartner[LogisticsPartner]
+        PaymentProvider[PaymentProvider]
+    end
+
+    User -->|Browse & Purchase| UI
+    UI -->|HTTP| AppServer
+
+    AppServer -->|REST API| ProductService
+    AppServer -->|REST API| OrderService
+    AppServer -->|REST API| PaymentGateway
+    AppServer -->|REST API| LogisticsService
+
+    PaymentGateway -->|Secure Transaction| PaymentProvider
+    LogisticsService -->|Order Details| LogisticsPartner

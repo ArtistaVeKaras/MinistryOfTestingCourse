@@ -1,0 +1,12 @@
+sequenceDiagram
+    participant User
+    participant LoginPage as Login Page
+    participant AuthServer as Auth Server
+    participant Dashboard
+
+    User->>LoginPage: Enter username & password
+    LoginPage->>AuthServer: Send credentials
+    AuthServer-->>LoginPage: Validate credentials (success/failure)
+    LoginPage-->>User: Show error or redirect
+    LoginPage->>Dashboard: Redirect on success
+    Dashboard-->>User: Display user dashboard

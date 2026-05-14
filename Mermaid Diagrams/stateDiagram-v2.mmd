@@ -1,0 +1,7 @@
+stateDiagram-v2
+    [*] --> Locked
+    Locked --> Unlocked : Enter correct PIN
+    Unlocked --> Locked : Timeout or Lock
+    Unlocked --> InUse : Start using
+    InUse --> Unlocked : Finish use
+    InUse --> Locked : Timeout or Lock

@@ -1,0 +1,15 @@
+digraph api_flow {
+    node[shape=box, style=filled];
+
+    client[label="Client"];
+    api_gateway[label="API Gateway"];
+    api_endpoint[label="API Endpoint"];
+    database[label="Database"];
+
+    client ->> api_gateway[label="Request"];
+    api_gateway ->> api_endpoint[label="Route Request"];
+    api_endpoint ->> database[label="Interact with Database"];
+    database ->> api_endpoint[label="Return Data"];
+    api_endpoint ->> api_gateway[label="Return Response"];
+    api_gateway ->> client[label="Return Response"];
+}
