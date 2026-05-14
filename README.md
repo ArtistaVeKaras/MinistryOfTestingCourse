@@ -15,9 +15,6 @@ This project contains all the lessons learned from the Ministry of Testing Sofwa
 ## Features
 - Feature 1
 - Feature 2
-- Feature 3
-- Feature 4
-- Feature 5
 
 ## Additional Information
 # MinistryOfTestingCourse
